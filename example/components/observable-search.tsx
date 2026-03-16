@@ -4,6 +4,7 @@ import { HStack, VStack } from '@goncharovv/layout';
 
 // TODO: import from dist
 import { useObservable, useObservableState } from '../../src';
+import { useDerivedValue } from '../../src/use-derived-value';
 
 
 export const ObservableSearch: FC = () => {
@@ -46,6 +47,18 @@ const SearchPreview: FC<{ search$: BehaviorSubject<string>; }> = ({ search$ }) =
       <p>Search Preview</p>
 
       <h3>{search}</h3>
+
+      <SearchLength search$={search$} />
+    </VStack>
+  );
+};
+
+const SearchLength: FC<{ search$: BehaviorSubject<string>; }> = ({ search$ }) => {
+  const length = useDerivedValue(search$, (search) => search.length);
+
+  return (
+    <VStack spacing="small-s" centered>
+      <p>Search Length (derived): {length}</p>
     </VStack>
   );
 };
