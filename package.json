@@ -1,0 +1,19 @@
+{
+  "name": "react-rxjs-toolbox",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoncharovV/react-rxjs-toolbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GoncharovV/react-rxjs-toolbox/issues"
+  },
+  "homepage": "https://github.com/GoncharovV/react-rxjs-toolbox#readme",
+  "description": ""
+}
