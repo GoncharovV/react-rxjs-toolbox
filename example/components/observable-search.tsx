@@ -1,10 +1,10 @@
-import { FC, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { BehaviorSubject } from 'rxjs';
 import { HStack, VStack } from '@goncharovv/layout';
 
 // TODO: import from dist
 import { useObservable, useObservableState } from '../../src';
-import { useDerivedValue } from '../../src/use-derived-value';
+import { useDistinctDerivedValue } from '../../src/use-derived-value';
 
 
 export const ObservableSearch: FC = () => {
@@ -53,12 +53,14 @@ const SearchPreview: FC<{ search$: BehaviorSubject<string>; }> = ({ search$ }) =
   );
 };
 
-const SearchLength: FC<{ search$: BehaviorSubject<string>; }> = ({ search$ }) => {
-  const length = useDerivedValue(search$, (search) => search.length);
+const SearchLength: FC<{ search$: BehaviorSubject<string>; }> = React.memo(({ search$ }) => {
+  const length = useDistinctDerivedValue(search$, (search) => search.length);
 
   return (
     <VStack spacing="small-s" centered>
       <p>Search Length (derived): {length}</p>
     </VStack>
   );
-};
+});
+
+SearchLength.displayName = 'SearchLength';
