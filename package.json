@@ -3,17 +3,35 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GoncharovV/react-rxjs-toolbox.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vadim Goncharov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GoncharovV/react-rxjs-toolbox/issues"
   },
   "homepage": "https://github.com/GoncharovV/react-rxjs-toolbox#readme",
-  "description": ""
+  "description": "",
+  "peerDependencies": {
+    "react": "^19",
+    "rxjs": "^7"
+  },
+  "devDependencies": {
+    "@goncharovv/eslint-config": "1.2.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.1",
+    "eslint": "9.39.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "rxjs": "7.8.2",
+    "vite": "8.0.0"
+  }
 }
