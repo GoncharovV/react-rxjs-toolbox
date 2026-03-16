@@ -1,26 +1,30 @@
 {
   "name": "react-rxjs-toolbox",
+  "description": "Set of hooks for using RxJS in React",
   "version": "0.0.1",
+  "author": "Vadim Goncharov",
+  "keywords": ["rxjs", "react", "hooks"],
+  "private": false,
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.mjs",
   "types": "dist/index.d.mts",
   "scripts": {
     "dev": "vite",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "build": "tsup"
+    "build": "tsup",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GoncharovV/react-rxjs-toolbox.git"
   },
-  "keywords": [],
-  "author": "Vadim Goncharov",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/GoncharovV/react-rxjs-toolbox/issues"
   },
   "homepage": "https://github.com/GoncharovV/react-rxjs-toolbox#readme",
-  "description": "",
   "peerDependencies": {
     "react": "^19",
     "rxjs": "^7"
