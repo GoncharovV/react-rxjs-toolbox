@@ -9,6 +9,7 @@ import { useObservable } from '../../src/use-observable';
 export const ObservableTicker = (): ReactNode => {
   const [ticker] = useState(() => interval(1000));
 
+
   return (
     <VStack spacing="medium-m" align="center">
       <h2>Tickers</h2>
