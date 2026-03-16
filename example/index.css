@@ -1,3 +1,8 @@
 p {
     font-size: 24px;
 }
+
+input {
+    padding: 5px;
+    font-size: 24px;
+}
