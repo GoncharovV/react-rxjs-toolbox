@@ -1,11 +1,13 @@
 {
   "name": "react-rxjs-toolbox",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
   "scripts": {
     "dev": "vite",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "build": "tsup"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,7 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "rxjs": "7.8.2",
+    "tsup": "8.5.1",
     "vite": "8.0.0"
   }
 }
