@@ -22,7 +22,6 @@ export function useDerivedValue<TValue, TDerived>(
   return useObservable(derivedObservable);
 }
 
-// TODO: remove duplication if code become more complex
 
 export function useDistinctDerivedValue<TValue, TDerived>(
   observable: Observable<TValue>,
