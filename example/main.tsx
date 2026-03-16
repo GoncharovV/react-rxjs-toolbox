@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { VStack } from '@goncharovv/layout';
 
+import { TodosWidget } from './components/global-observable-state';
 import { ObservableSearch } from './components/observable-search';
 import { ObservableTicker } from './components/observable-ticker';
 
@@ -17,6 +18,8 @@ root.render(
       <ObservableTicker />
 
       <ObservableSearch />
+
+      <TodosWidget />
     </VStack>
   </StrictMode>,
 );
