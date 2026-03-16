@@ -2,8 +2,7 @@ import { FC, ReactNode, useState } from 'react';
 import { interval, Observable } from 'rxjs';
 import { HStack, Stack, VStack } from '@goncharovv/layout';
 
-// TODO: import from dist
-import { useObservable } from '../../src/use-observable';
+import { useObservable } from '../../dist/index.mjs';
 
 
 export const ObservableTicker = (): ReactNode => {

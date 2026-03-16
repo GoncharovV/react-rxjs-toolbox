@@ -2,9 +2,7 @@ import React, { FC, useState } from 'react';
 import { BehaviorSubject } from 'rxjs';
 import { HStack, VStack } from '@goncharovv/layout';
 
-// TODO: import from dist
-import { useObservable, useObservableState } from '../../src';
-import { useDistinctDerivedValue } from '../../src/use-derived-value';
+import { useDistinctDerivedValue, useObservable, useObservableState } from '../../dist/index.mjs';
 
 
 export const ObservableSearch: FC = () => {
