@@ -20,6 +20,10 @@ interface ObservableState<T> {
 export function useObservable<TValue>(
   observable: Observable<TValue>,
 ): TValue | undefined;
+export function useObservable<TValue, TInitial extends TValue | undefined>(
+  observable: Observable<TValue>,
+  initialOrFactory: TInitial | (() => TInitial),
+): TValue | TInitial;
 export function useObservable<TValue, TInitial extends TValue | undefined = undefined>(
   observable: Observable<TValue>,
   initialOrFactory?: TInitial | (() => TInitial),
@@ -78,6 +82,7 @@ export function useObservable<TValue, TInitial extends TValue | undefined = unde
 
   return useSyncExternalStore(
     record.subscribe,
+    // no need to wrap with use callback because of initialOrFactory dependency
     () => record.getSnapshot(initialOrFactory),
     typeof initialOrFactory === 'undefined'
       ? undefined
