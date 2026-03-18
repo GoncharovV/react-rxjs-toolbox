@@ -11,6 +11,7 @@ export default [
       '@typescript-eslint/no-unsafe-function-type': 'off',
       '@stylistic/padding-line-between-statements': 'off',
       '@typescript-eslint/no-empty-object-type': 'off',
+      'react/display-name': 'off'
     },
   },
 
