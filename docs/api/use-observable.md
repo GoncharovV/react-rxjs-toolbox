@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-import { UseObservableDemo } from '@site/docs-src/components/demos/UseObservableDemo';
+import { ObservableDemo } from '@site/docs-src/components/demos/observable-demo';
 
 # useObservable
 
@@ -95,4 +95,28 @@ const Component = () => {
 
 ## Live demo
 
-<UseObservableDemo />
+```tsx
+import { useObservable } from 'react-rxjs-toolbox';
+import { BehaviorSubject } from 'rxjs';
+
+
+const count$ = new BehaviorSubject<number>(0);
+
+const increment = () => {
+  count$.next(count$.value + 1);
+};
+
+export const ObservableDemo = () => {
+  const count = useObservable(count$);
+
+  return (
+    <>
+      <button onClick={increment}>Increment</button>
+
+      <p>Count: {count}</p>`
+    <>
+  );
+};
+```
+
+<ObservableDemo />
