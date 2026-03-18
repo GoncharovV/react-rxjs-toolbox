@@ -27,7 +27,7 @@ export default defineConfig({
             items: [
               { text: 'Getting Started', link: '/en/introduction/getting-started' },
               { text: 'Overview', link: '/en/introduction/overview' },
-              { text: 'Motivation', link: '/en/introduction/motivation' },
+              // { text: 'Motivation', link: '/en/introduction/motivation' },
             ],
           },
           {
@@ -56,7 +56,7 @@ export default defineConfig({
             items: [
               { text: 'Начало работы', link: '/ru/introduction/getting-started' },
               { text: 'Обзор', link: '/ru/introduction/overview' },
-              { text: 'Мотивация', link: '/ru/introduction/motivation' },
+              // { text: 'Мотивация', link: '/ru/introduction/motivation' },
             ],
           },
           {
