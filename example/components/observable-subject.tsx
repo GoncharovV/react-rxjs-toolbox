@@ -53,7 +53,6 @@ const InternalContainer: FC<{ onReset: () => void; }> = ({ onReset }) => {
 const Listener: FC<{ subject$: Subject<string>; }> = ({ subject$ }) => {
   const value = useObservable(subject$, 'not emitted yet');
 
-
   return (
     <VStack
       centered
