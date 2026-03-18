@@ -2,8 +2,6 @@
 sidebar_position: 2
 ---
 
-import { UseObservableStateDemo } from '@site/docs-src/components/demos/UseObservableStateDemo';
-
 # useObservableState
 
 A `useState`-like hook for `BehaviorSubject`. Returns the current value and a setter function.
@@ -61,5 +59,54 @@ setSearch((current) => current.trim());
 ```
 
 ## Live demo
+
+```tsx
+import { useObservable, useObservableState } from 'react-rxjs-toolbox';
+import { BehaviorSubject, of, switchMap } from 'rxjs';
+
+const TODOS = [
+  { id: 1, title: 'Buy groceries' },
+  ...
+  { id: 10, title: 'Write react DI library' },
+];
+
+function getTodos(search: string) {
+  return of(TODOS.filter((todo) => todo.title.includes(search)));
+}
+
+const search$ = new BehaviorSubject<string>('');
+
+const filteredTodos$ = search$.pipe(
+  switchMap((search) => getTodos(search)),
+);
+
+export const UseObservableStateDemo = () => {
+  return <>
+    <SearchInput />
+
+    <TodoList />
+  </>
+};
+
+const SearchInput = () => {
+  const [search, setSearch] = useObservableState(search$);
+
+  return <input value={search} onChange={(e) => setSearch(e.target.value)} />;
+};
+
+const TodoList = () => {
+  const todos = useObservable(filteredTodos$, []);
+
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo.id}>{todo.title}</li>
+      ))}
+    </ul>
+  );
+};
+```
+
+import { UseObservableStateDemo } from '@site/docs-src/components/demos/observable-state-demo';
 
 <UseObservableStateDemo />
