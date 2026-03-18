@@ -2,7 +2,8 @@
 
 ## Installation
 
-:::info <span style="font-size: 1rem">You should have rxjs (and React) installed </span>
+:::info
+You should have rxjs (and React) installed.
 
 ```bash
 npm install rxjs
@@ -57,13 +58,3 @@ const UsageExample = () => {
 }
 ```
 
-<div ref="el" />
-
-<script setup>
-import { ref, onMounted } from 'vue'
-import { renderUsageExample } from '../../../example/components/usage-example'
-
-const el = ref()
-
-onMounted(() => renderUsageExample(el.value))
-</script>

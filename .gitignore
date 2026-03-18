@@ -1,3 +1,5 @@
 node_modules
 dist
-docs/.vitepress/cache
+_docs/.vitepress/cache
+.docusaurus
+build
