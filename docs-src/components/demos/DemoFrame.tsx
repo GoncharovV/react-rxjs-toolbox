@@ -1,0 +1,13 @@
+import { FC, PropsWithChildren } from 'react';
+
+const style: React.CSSProperties = {
+  border: '1px dashed var(--ifm-color-emphasis-400)',
+  padding: '16px',
+  borderRadius: '8px',
+  marginTop: '12px',
+  marginBottom: '12px',
+};
+
+export const DemoFrame: FC<PropsWithChildren> = ({ children }) => (
+  <div style={style}>{children}</div>
+);

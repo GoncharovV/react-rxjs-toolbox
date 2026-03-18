@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+import { UseObservableDemo } from '@site/docs-src/components/demos/UseObservableDemo';
+
 # useObservable
 
 Subscribes to an RxJS `Observable` and returns its latest emitted value as React state.
@@ -91,3 +93,6 @@ const Component = () => {
 };
 ```
 
+## Live demo
+
+<UseObservableDemo />
