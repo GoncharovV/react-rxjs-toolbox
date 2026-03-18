@@ -1,6 +1,7 @@
-import { FC, PropsWithChildren } from 'react';
+import { CSSProperties, FC, PropsWithChildren } from 'react';
 
-const style: React.CSSProperties = {
+
+const style: CSSProperties = {
   border: '1px dashed var(--ifm-color-emphasis-400)',
   padding: '16px',
   borderRadius: '8px',

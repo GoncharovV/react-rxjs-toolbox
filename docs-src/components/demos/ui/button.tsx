@@ -12,6 +12,7 @@ const style: CSSProperties = {
   backgroundColor: '#fff',
   color: '#000',
   cursor: 'pointer',
+  fontSize: '18px',
 };
 
 

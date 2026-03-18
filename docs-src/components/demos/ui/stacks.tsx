@@ -18,6 +18,7 @@ export const HStack: FC<PropsWithChildren> = ({ children }) => {
 
 const vStyle: CSSProperties = {
   display: 'flex',
+  flexDirection: 'column',
   gap: '20px',
 };
 

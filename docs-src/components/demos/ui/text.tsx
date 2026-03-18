@@ -2,7 +2,7 @@ import { CSSProperties, FC, PropsWithChildren } from 'react';
 
 
 const style: CSSProperties = {
-  fontSize: '16px',
+  fontSize: '20px',
   margin: 0,
 };
 

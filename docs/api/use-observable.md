@@ -113,7 +113,7 @@ export const ObservableDemo = () => {
     <>
       <button onClick={increment}>Increment</button>
 
-      <p>Count: {count}</p>`
+      <p>Count: {count}</p>
     <>
   );
 };
