@@ -2,6 +2,10 @@
 sidebar_position: 6
 ---
 
+:::danger
+Experimental
+:::
+
 # useDistinctObservable
 
 ```tsx

@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-import { UseDerivedValueDemo } from '@site/docs-src/components/demos/UseDerivedValueDemo';
+
 
 # useDerivedValue
 
@@ -35,6 +35,7 @@ The derived value is **only** updated when the observable emits. Changing the `p
 ## Example
 
 ```tsx
+import { useState } from 'react';
 import { useDerivedValue, useObservableState } from 'react-rxjs-toolbox';
 import { BehaviorSubject } from 'rxjs';
 
@@ -42,12 +43,20 @@ const text$ = new BehaviorSubject<string>('hello');
 
 const Component = () => {
   const [text, setText] = useObservableState(text$);
-  const reversed = useDerivedValue(text$, (v) => v.split('').reverse().join(''));
+  const [reactText, setReactText] = useState('react');
+
+  const result = useDerivedValue(text$, (storeText) => {
+    // this is uncommon to access react state inside producer
+    // only for demonstration purposes.
+    return `Store: ${storeText} & React State: ${reactText}`;
+  });
 
   return (
     <div>
       <input value={text} onChange={(e) => setText(e.target.value)} />
-      <p>Reversed: {reversed}</p>
+      <input value={reactText} onChange={(e) => setReactText(e.target.value)} />
+
+      <p>Result: {result}</p>
     </div>
   );
 };
@@ -55,4 +64,6 @@ const Component = () => {
 
 ## Live demo
 
-<UseDerivedValueDemo />
+import { DerivedValueDemo } from '@site/docs-src/components/demos/derived-value-demo.tsx';
+
+<DerivedValueDemo />
