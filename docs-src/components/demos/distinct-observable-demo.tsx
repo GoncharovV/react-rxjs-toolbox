@@ -1,24 +1,24 @@
-import { useObservable, useObservableState } from 'react-rxjs-toolbox';
+import { useDistinctObservable, useObservable, useObservableState } from 'react-rxjs-toolbox';
 import { BehaviorSubject, map } from 'rxjs';
 
-import { useDistinctObservable } from '../../../src';
 import { useRendersCount } from './hooks';
 import { Frame, HStack, Input, Text, VStack } from './ui';
 
 
 const search$ = new BehaviorSubject<string>('');
 
-const isLongSearch$ = search$.pipe(
-  map((search) => search.length > 5),
+const filters$ = search$.pipe(
+  map((search) => ({ active: search.length > 5 })),
 );
 
-isLongSearch$.subscribe(console.log);
 
 export const DistinctObservableDemo = () => {
   return (
     <Frame>
       <VStack>
         <SearchContainer />
+
+        <Text>active – search.length {'>'} 5</Text>
 
         <GeneralInfo />
 
@@ -31,23 +31,17 @@ export const DistinctObservableDemo = () => {
 export const SearchContainer = () => {
   const [search, setSearch] = useObservableState(search$);
 
-  return (
-    <Frame>
-      <HStack>
-        <Input value={search} onChange={setSearch} />
-      </HStack>
-    </Frame>
-  );
+  return <Input value={search} onChange={setSearch} />;
 };
 
 export const GeneralInfo = () => {
-  const isLong = useObservable(isLongSearch$);
+  const filters = useObservable(filters$);
 
   const count = useRendersCount();
 
   return (
     <HStack>
-      <Text>isLongSearch: {String(isLong)}</Text>
+      <Text>Active: {String(filters?.active)}</Text>
 
       <Text>Renders Count: {count} (Observable)</Text>
     </HStack>
@@ -55,13 +49,13 @@ export const GeneralInfo = () => {
 };
 
 export const DistinctInfo = () => {
-  const isLong = useDistinctObservable(isLongSearch$);
+  const filters = useDistinctObservable(filters$, undefined, (a, b) => a.active === b.active);
 
   const count = useRendersCount();
 
   return (
     <HStack>
-      <Text>isLongSearch: {String(isLong)}</Text>
+      <Text>Active: {String(filters?.active)}</Text>
 
       <Text>Renders Count: {count} (Distinct Observable)</Text>
     </HStack>
