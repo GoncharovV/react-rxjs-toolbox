@@ -13,4 +13,12 @@ export default [
       '@typescript-eslint/no-empty-object-type': 'off',
     },
   },
+
+  {
+    files: ['*.cjs'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+      'no-undef': 'off',
+    },
+  },
 ];
