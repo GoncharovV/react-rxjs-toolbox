@@ -19,6 +19,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.cjs'),
+          routeBasePath: '/',
         },
         blog: false,
         theme: {
