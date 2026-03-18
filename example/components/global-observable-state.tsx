@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { BehaviorSubject, of, switchMap } from 'rxjs';
 import { VStack } from '@goncharovv/layout';
 
-import { useDistinctDerivedValue, useObservable, useObservableState } from '../../dist/index.mjs';
+import { useDistinctDerivedValue, useObservable, useObservableState } from '../../src';
 
 
 const TODOS = [

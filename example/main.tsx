@@ -4,6 +4,7 @@ import { VStack } from '@goncharovv/layout';
 
 import { TodosWidget } from './components/global-observable-state';
 import { ObservableSearch } from './components/observable-search';
+import { ObservableSubject } from './components/observable-subject';
 import { ObservableTicker } from './components/observable-ticker';
 
 import '@goncharovv/layout/dist/styles/index.css';
@@ -20,6 +21,8 @@ root.render(
       <ObservableSearch />
 
       <TodosWidget />
+
+      <ObservableSubject />
     </VStack>
   </StrictMode>,
 );
