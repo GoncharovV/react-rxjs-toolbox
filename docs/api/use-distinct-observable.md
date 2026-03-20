@@ -2,11 +2,11 @@
 sidebar_position: 6
 ---
 
+# useDistinctObservable 🚧
+
 :::danger
 Experimental
 :::
-
-# useDistinctObservable
 
 ```tsx
 import { useDistinctObservable, useObservable, useObservableState } from 'react-rxjs-toolbox';
