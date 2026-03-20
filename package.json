@@ -37,8 +37,8 @@
     "rxjs": "^7"
   },
   "devDependencies": {
-    "@docusaurus/core": "3.8.1",
-    "@docusaurus/preset-classic": "3.8.1",
+    "@docusaurus/core": "3.9.2",
+    "@docusaurus/preset-classic": "3.9.2",
     "@goncharovv/eslint-config": "1.2.2",
     "@goncharovv/layout": "0.2.0",
     "@types/react": "19.2.14",
