@@ -1,6 +1,7 @@
 import { useMemo, useRef } from 'react';
-import { useObservable } from 'react-rxjs-toolbox';
 import { distinctUntilChanged, Observable } from 'rxjs';
+
+import { useObservable } from './use-observable';
 
 
 export function useDistinctObservable<TValue>(

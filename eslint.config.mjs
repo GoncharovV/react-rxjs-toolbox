@@ -22,4 +22,17 @@ export default [
       'no-undef': 'off',
     },
   },
+
+  {
+    files: ['src/**'],
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          name: 'react-rxjs-toolbox',
+          message: 'Self import is not allowed.',
+        },
+      ],
+    },
+  },
 ];
