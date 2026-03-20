@@ -3,6 +3,7 @@ const config = {
   title: 'react-rxjs-toolbox',
   tagline: 'Set of hooks for using RxJS in React',
   url: 'https://react-rxjs-toolbox.vercel.app',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
