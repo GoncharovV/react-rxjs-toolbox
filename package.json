@@ -31,9 +31,9 @@
   "bugs": {
     "url": "https://github.com/GoncharovV/react-rxjs-toolbox/issues"
   },
-  "homepage": "https://github.com/GoncharovV/react-rxjs-toolbox#readme",
+  "homepage": "https://react-rxjs-toolbox.vercel.app",
   "peerDependencies": {
-    "react": "^19",
+    "react": "^19 | ^18.3",
     "rxjs": "^7"
   },
   "devDependencies": {
