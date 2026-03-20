@@ -2,8 +2,7 @@
 const config = {
   title: 'react-rxjs-toolbox',
   tagline: 'Set of hooks for using RxJS in React',
-  url: 'https://goncharovv.github.io',
-  baseUrl: '/react-rxjs-toolbox/',
+  url: 'https://react-rxjs-toolbox.vercel.app',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
