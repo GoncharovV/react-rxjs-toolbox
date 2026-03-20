@@ -1,7 +1,7 @@
 {
   "name": "react-rxjs-toolbox",
   "description": "Set of hooks for using RxJS in React",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Vadim Goncharov",
   "keywords": [
     "rxjs",
