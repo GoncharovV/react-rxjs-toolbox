@@ -84,9 +84,12 @@ export function useObservable<TValue, TInitial extends TValue | undefined = unde
     record.subscribe,
     // no need to wrap with use callback because of initialOrFactory dependency
     () => record.getSnapshot(initialOrFactory),
-    typeof initialOrFactory === 'undefined'
-      ? () => undefined as TValue
-      : () => getValue(initialOrFactory) as TValue,
+    () => {
+      return typeof initialOrFactory === 'undefined'
+        ? undefined as TValue
+        : getValue(initialOrFactory) as TValue;
+    },
+
   );
 }
 
