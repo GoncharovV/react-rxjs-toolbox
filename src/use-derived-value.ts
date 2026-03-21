@@ -9,7 +9,17 @@ import { useObservable } from './use-observable';
 export function useDerivedValue<TValue, TDerived>(
   observable: Observable<TValue>,
   producer: (value: TValue) => TDerived,
-) {
+): TDerived | undefined;
+export function useDerivedValue<TValue, TDerived>(
+  observable: Observable<TValue>,
+  producer: (value: TValue) => TDerived,
+  initialOrFactory: TDerived | (() => TDerived),
+): TDerived;
+export function useDerivedValue<TValue, TDerived>(
+  observable: Observable<TValue>,
+  producer: (value: TValue) => TDerived,
+  initialOrFactory?: TDerived | (() => TDerived),
+): TDerived {
   const producerRef = useRef(producer);
   producerRef.current = producer;
 
@@ -19,5 +29,5 @@ export function useDerivedValue<TValue, TDerived>(
     );
   }, [observable]);
 
-  return useObservable(derivedObservable);
+  return useObservable(derivedObservable, initialOrFactory) as TDerived;
 }
