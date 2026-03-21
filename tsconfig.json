@@ -17,6 +17,10 @@
     "lib": ["es6", "DOM", "ESNext"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+
+    "types": [
+      "vitest/globals"
+    ],
   },
   "include": ["src", "example", "docs-src"]
 }
