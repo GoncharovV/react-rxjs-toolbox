@@ -17,6 +17,7 @@
   "scripts": {
     "dev": "vite",
     "lint": "eslint",
+    "lint:ci": "eslint",
     "lint:fix": "eslint --fix",
     "build": "tsup",
     "publish": "npm publish --access public",
