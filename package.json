@@ -20,7 +20,7 @@
     "lint:ci": "eslint",
     "lint:fix": "eslint --fix",
     "build": "tsup",
-    "publish": "npm publish --access public",
+    "publish": "npm run build && npm publish --access public",
     "docs:dev": "docusaurus start",
     "docs:build": "docusaurus build",
     "docs:serve": "docusaurus serve",
