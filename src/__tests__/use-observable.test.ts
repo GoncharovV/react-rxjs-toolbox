@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { act, render, renderHook } from '@testing-library/react';
+import { renderHook } from '@testing-library/react';
 
 import { useObservable } from '../use-observable';
 

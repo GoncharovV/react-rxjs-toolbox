@@ -4,6 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 
 import { DemoFrame } from './DemoFrame';
 
+
 const text$ = new BehaviorSubject<string>('hello');
 
 const WithDistinct = () => {
@@ -13,7 +14,12 @@ const WithDistinct = () => {
 
   return (
     <p style={{ margin: 0 }}>
-      <strong>useDistinctDerivedValue</strong> — length: {length}, renders: {renders.current}
+      <strong>useDistinctDerivedValue</strong>
+      {' '}
+      — length:
+      {length}
+      , renders:
+      {renders.current}
     </p>
   );
 };
@@ -25,7 +31,12 @@ const WithoutDistinct = () => {
 
   return (
     <p style={{ margin: 0 }}>
-      <strong>useDerivedValue</strong> — length: {length}, renders: {renders.current}
+      <strong>useDerivedValue</strong>
+      {' '}
+      — length:
+      {length}
+      , renders:
+      {renders.current}
     </p>
   );
 };

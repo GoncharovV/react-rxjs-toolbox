@@ -16,6 +16,10 @@ export default [
   },
 
   {
+    ignores: ['.docusaurus'],
+  },
+
+  {
     files: ['*.cjs'],
     rules: {
       '@typescript-eslint/no-require-imports': 'off',
